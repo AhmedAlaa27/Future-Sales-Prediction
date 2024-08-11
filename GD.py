@@ -36,14 +36,14 @@ print(f"Target values: {y_train[:4]}\n")
 score = sgdr.score(x_norm, y_train)
 print(f'Score = {score: .2f}')
 
-# plot predictions and targets vs original features
-fig, ax = plt.subplots(1, 3, figsize=(12, 5), sharey=True)
-heading = np.array(['TV', 'Radio', 'Newspaper'])
-for i in range(len(ax)):
-    ax[i].scatter(x_train[:, i], y_train, label='target')
-    ax[i].set_xlabel(heading[i])
-    ax[i].scatter(x_train[:, i], y_predict, color='orange', label='predict')
-ax[0].set_ylabel("Price")
-ax[0].legend()
-fig.suptitle("target versus prediction using z-score normalized model")
-plt.show()
+# # plot predictions and targets vs original features
+# fig, ax = plt.subplots(1, 3, figsize=(12, 5), sharey=True)
+# heading = np.array(['TV', 'Radio', 'Newspaper'])
+# for i in range(len(ax)):
+#     ax[i].scatter(x_train[:, i], y_train, label='target')
+#     ax[i].set_xlabel(heading[i])
+#     ax[i].scatter(x_train[:, i], y_predict, color='orange', label='predict')
+# ax[0].set_ylabel("Price")
+# ax[0].legend()
+# fig.suptitle("target versus prediction using z-score normalized model")
+# plt.show()
